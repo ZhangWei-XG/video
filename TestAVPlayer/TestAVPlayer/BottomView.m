@@ -49,7 +49,7 @@
         _minTimeLab.text = @"00:00";
 //        _minTimeLab.backgroundColor = [UIColor redColor];
         _minTimeLab.textAlignment = NSTextAlignmentCenter;
-        _minTimeLab.frame = CGRectMake(_PlayBtn.frame.origin.x+35, 0, 50, 40);
+        _minTimeLab.frame = CGRectMake(_PlayBtn.frame.origin.x+25, 0, 50, 40);
     }
     return _minTimeLab;
 }
@@ -60,7 +60,6 @@
         _maxTimeLab.font = [UIFont systemFontOfSize:10];
         _maxTimeLab.textColor = [UIColor blackColor];
         _maxTimeLab.text = @"00:00";
-//        _maxTimeLab.backgroundColor = [UIColor redColor];
         _maxTimeLab.textAlignment = NSTextAlignmentCenter;
         _maxTimeLab.frame = CGRectMake(self.frame.size.width-55, 0, 50, 40);
     }
@@ -70,9 +69,8 @@
 - (ZWSlider *)Slider{
     if (!_Slider) {
         _Slider         = [[ZWSlider alloc]init];
-//        _Slider.backgroundColor = [UIColor yellowColor];
         _Slider.maximumTrackTintColor = [UIColor clearColor];
-        _Slider.frame   =  CGRectMake(90, 5.5,self.frame.size.width-110-35, 30);
+        _Slider.frame   =  CGRectMake(80, 5.5,self.frame.size.width-110-35, 30);
     }
     return _Slider;
 }
@@ -80,7 +78,7 @@
 - (UIProgressView *)ProgressView{
     if (!_ProgressView) {
         _ProgressView = [[UIProgressView alloc]init];
-        _ProgressView.frame = CGRectMake(90, 19,self.frame.size.width-110-35, 1);
+        _ProgressView.frame = CGRectMake(80, 19,self.frame.size.width-110-35, 1);
         _ProgressView.trackTintColor = [UIColor colorWithWhite:5 alpha:.5];
     }
     return _ProgressView;

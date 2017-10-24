@@ -9,12 +9,14 @@
 #import "ViewController.h"
 #import "BottomView.h"
 
-#define SCREEN_WITH    [UIScreen mainScreen].bounds.size.width
+#define SCREEN_WIDTH    [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 
 @interface ViewController ()
 
 @property (nonatomic,strong) BottomView *bottomView;
+@property (nonatomic,strong) UIView     *statusBar;
+@property (nonatomic,assign) BOOL        isFull;
 
 @end
 
@@ -70,11 +72,11 @@
 - (UIView *)playView{
     if (!_playView) {
         
-        CGRect rect = CGRectMake(0, 64,SCREEN_WITH , 200);
+        CGRect rect = CGRectMake(0, 64,SCREEN_WIDTH , 200);
         _playView = [[UIView alloc]initWithFrame:rect];
         _playView.backgroundColor = [UIColor grayColor];
         [self.view addSubview:_playView];
-        
+
     }
     return _playView;
 }
@@ -83,7 +85,7 @@
     if (!_activity) {
 
         _activity        = [[UIActivityIndicatorView alloc]init];
-        _activity.frame = CGRectMake(SCREEN_WITH/2-15, self.playView.frame.size.height/2-15, 30, 30);
+        _activity.frame = CGRectMake(SCREEN_WIDTH/2-15, self.playView.frame.size.height/2-15, 30, 30);
         [_activity startAnimating];
         [self.playView addSubview:_activity];
 
@@ -197,7 +199,7 @@
         CGFloat totalDuration       = CMTimeGetSeconds(duration);
         CGFloat progress            = timeInterval / totalDuration;
         
-        NSLog(@"%.2f",progress);
+//        NSLog(@"%.2f",progress);
         
         [self.bottomView.ProgressView setProgress:progress animated:NO];
         //设置缓存进度颜色
@@ -248,7 +250,52 @@
     _bottomShow = !_bottomShow;
     _showTime = 0;
     [self _showBottomView];
+    
+    if (!_isFull) {
+        
+        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+        [keyWindow addSubview:self.playView];
+        [UIView animateWithDuration:0.1 animations:^{
+            
+            self.playView.frame = CGRectMake(0, 0, SCREEN_HEIGHT, SCREEN_WIDTH);
+            self.playerLayer.frame = CGRectMake(0, 0, SCREEN_HEIGHT, SCREEN_WIDTH);
+
+        }];
+        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationLandscapeRight] forKey:@"orientation"];
+  
+    }else{
+        
+        [self.view addSubview:self.playView];
+
+        [UIView animateWithDuration:0.1 animations:^{
+            
+            self.playView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 200);
+            self.playerLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH, 200);
+
+        }];
+        [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIInterfaceOrientationPortrait] forKey:@"orientation"];
+    }
+    
+    _isFull = !_isFull;
+    [self setStatusBarHidden:NO];
+
+    
 }
+
+#pragma mark - 隐藏或者显示状态栏方法
+- (void)setStatusBarHidden:(BOOL)hidden{
+    //设置是否隐藏
+    self.statusBar.hidden = hidden;
+}
+
+/**statusBar*/
+- (UIView *) statusBar{
+    if (_statusBar == nil){
+        _statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    }
+    return _statusBar;
+}
+
 
 - (void)_showBottomView{
     

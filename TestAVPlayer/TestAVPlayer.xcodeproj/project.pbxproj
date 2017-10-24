@@ -13,6 +13,7 @@
 		0439C2031F395857004FC949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0439C2011F395857004FC949 /* Main.storyboard */; };
 		0439C2051F395857004FC949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0439C2041F395857004FC949 /* Assets.xcassets */; };
 		0439C2081F395857004FC949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0439C2061F395857004FC949 /* LaunchScreen.storyboard */; };
+		0478CA861F4BD5C2008FB633 /* FullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478CA851F4BD5C2008FB633 /* FullViewController.m */; };
 		0482F6AC1F3BE8F8005591D2 /* play.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0482F6AB1F3BE8F8005591D2 /* play.mp4 */; };
 		0482F6AF1F3C0220005591D2 /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0482F6AE1F3C021F005591D2 /* BottomView.m */; };
 		0482F6B21F3C420B005591D2 /* ZWSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0482F6B11F3C420B005591D2 /* ZWSlider.m */; };
@@ -30,6 +31,8 @@
 		0439C2041F395857004FC949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0439C2071F395857004FC949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0439C2091F395857004FC949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0478CA841F4BD5C2008FB633 /* FullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullViewController.h; sourceTree = "<group>"; };
+		0478CA851F4BD5C2008FB633 /* FullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullViewController.m; sourceTree = "<group>"; };
 		0482F6AB1F3BE8F8005591D2 /* play.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = play.mp4; sourceTree = "<group>"; };
 		0482F6AD1F3C021F005591D2 /* BottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
 		0482F6AE1F3C021F005591D2 /* BottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				0439C1FC1F395857004FC949 /* AppDelegate.m */,
 				0439C1FE1F395857004FC949 /* ViewController.h */,
 				0439C1FF1F395857004FC949 /* ViewController.m */,
+				0478CA841F4BD5C2008FB633 /* FullViewController.h */,
+				0478CA851F4BD5C2008FB633 /* FullViewController.m */,
 				0482F6AD1F3C021F005591D2 /* BottomView.h */,
 				0482F6AE1F3C021F005591D2 /* BottomView.m */,
 				0482F6B01F3C420B005591D2 /* ZWSlider.h */,
@@ -174,6 +179,7 @@
 				0482F6B91F3C431E005591D2 /* UIImage+ZWTintColor.m in Sources */,
 				0482F6B21F3C420B005591D2 /* ZWSlider.m in Sources */,
 				0439C1FD1F395857004FC949 /* AppDelegate.m in Sources */,
+				0478CA861F4BD5C2008FB633 /* FullViewController.m in Sources */,
 				0439C1FA1F395857004FC949 /* main.m in Sources */,
 				0482F6AF1F3C0220005591D2 /* BottomView.m in Sources */,
 			);
