@@ -3,7 +3,7 @@
 //  TestAVPlayer
 //
 //  Created by mac on 2017/8/8.
-//  Copyright © 2017年 zhang. All rights reserved.
+//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.//  Copyright © 2017年 zhang. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -44,8 +44,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appwillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
     //APP运行状态通知，从后台进入前台
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appwillBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
-
-
+//测试测试测试
     
     
 }
